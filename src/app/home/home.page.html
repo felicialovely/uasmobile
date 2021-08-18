@@ -1,0 +1,141 @@
+<ion-content>
+    <div class="flipbook-viewport">
+      <div class="container">
+        <div class="flipbook">
+          <div class="hard" style="background-image:url(assets/pages/Cover1.png)"></div>
+          <div class="single" style="background-image:url(assets/pages/tutorial.png)"></div>
+          <div class="single" style="background-image:url(assets/pages/camera.png)">
+           <div class="foto">
+            <ion-avatar style="width: 120px; height: 120px;">
+              <img *ngIf="image" [src]="image">
+            </ion-avatar>
+          </div>
+          <div class="button-foto">
+          <ion-button shape="round" (click)="takePhoto()" ><ion-icon name="camera"></ion-icon></ion-button>
+        </div>
+        
+  
+          </div>
+          <div class="single" style="background-image:url(assets/pages/page1.png)"></div>
+          <div class="single" style="background-image:url(assets/pages/page2.png)">
+            <button style="position: absolute;
+            top: 363px;
+            left: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="one();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page3.png)">
+            <button style="position: absolute;
+            top: 366px;
+            left: 309px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="two();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page4.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page5.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page6.png)">
+            <button style="position: absolute;
+            top: 261px;
+            left: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="three();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page7.png)">
+            <button style="position: absolute;
+            top: 356px;
+            left: 303px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="four();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page8.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page9.png)">
+            <button style="position: absolute;
+            top: 356px;
+            left: 303px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="five();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page10.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page11.png)">
+            <button style="position: absolute;
+            top: 309px;
+            left: 75px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="six();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page12.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page13.png)">
+            <button style="position: absolute;
+            top: 380px;
+            left: 143px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="seven();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page14.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page15.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page16.png)">
+            <button style="position: absolute;
+            top: 247px;
+            left: 28px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="eight();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page17.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page18.png)">
+            <button style="position: absolute;
+            top: 363px;
+            left: 45px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="nine();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page19.png)">
+            <button style="position: absolute;
+            top: 364px;
+            left: 307px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            " (click)="ten();"></button>
+        </div>
+        <div class="single" style="background-image:url(assets/pages/page20.png)"></div>
+        <div class="single" style="background-image:url(assets/pages/page23.png)">
+          <div  *ngFor="let data_firebase of data ;  let i=index " >
+            <h1 *ngIf="i<data?.length && i>data?.length-2" class="input-nama-end"> = Thank you for reading =<br>{{data_firebase.username}} </h1>     
+            </div >
+        </div>
+        <div class="hard" style="background-image:url(assets/pages/page24.png)"></div>
+        <div class="hard" style="background-image:url(assets/pages/Cover2.png)"></div>
+        </div>
+      </div>
+    </div>
+    
+  </ion-content>
+  

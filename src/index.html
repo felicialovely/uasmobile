@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <script type="text/javascript" src="assets/extras/jquery.min.1.7.js"></script>
+  <script type="text/javascript" src="assets/extras/modernizr.2.5.3.min.js"></script>
+</head>
+
+<body>
+  
+  
+<script type="text/javascript">
+
+  function loadApp() {
+  
+    var flipbook = $('.flipbook');
+  
+     // Check if the CSS was already loaded
+    
+    if (flipbook.width()==0 || flipbook.height()==0) {
+      setTimeout(loadApp, 10);
+      return;
+    }
+  
+    $('.flipbook .double').scissor();
+  
+    // Create the flipbook
+  
+    $('.flipbook').turn({
+        // Elevation
+        width:681,
+        height:400,
+        elevation: 50,
+        
+        // Enable gradients
+  
+        gradients: true,
+        
+        // Auto center this flipbook
+  
+        autoCenter: true
+  
+    });
+  }
+  
+  // Load the HTML4 version if there's not CSS transform
+  
+  yepnope({
+    test : Modernizr.csstransforms,
+    yep: ['/assets/lib/turn.min.js'],
+    nope: ['/assets/lib/turn.html4.min.js'],
+    both: ['/assets/lib/scissor.min.js', '/assets/css/double-page.css'],
+    complete: loadApp
+  });
+  
+  </script>
+  <app-root></app-root>
+  
+</body>
+
+</html>
